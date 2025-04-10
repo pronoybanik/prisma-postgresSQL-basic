@@ -35,18 +35,26 @@ const main = async () => {
     //create post
     const createPost = await prisma.post.create({
         data: {
-            title: "next.js",
-            content: "next.js all data",
+            title: "web development",
+            content: "web development all data",
             authorId: 1,
             postCategory: {
-                create: {
-                    categoryId: 5
-                    // category: {
-                    //     connect: {
-                    //         id:1
-                    //     }
-                    // }
-                }
+                // create: {
+                //     categoryId: 5
+                //     // category: {
+                //     //     connect: {
+                //     //         id:1
+                //     //     }
+                //     // }
+                // }
+                create: [
+                    {
+                        categoryId: 1,
+                    },
+                    {
+                        categoryId: 5,
+                    }
+                ]
             }
         },
         include: {
