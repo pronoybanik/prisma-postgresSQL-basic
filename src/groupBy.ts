@@ -3,7 +3,6 @@ import { PrismaClient } from "../generated/prisma";
 const prisma = new PrismaClient();
 
 
-
 const groupBy = async () => {
 
     const groupBy = await prisma.post.groupBy({
@@ -22,7 +21,6 @@ const groupBy = async () => {
 
     console.log(groupBy);
     
-
 }
 
 groupBy();
