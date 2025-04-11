@@ -33,6 +33,7 @@ model User {
   username String   @unique
   email    String   @unique
   role     UserRole @default(user)
+  age      Int      @default(0)
   profile  Profile? // one to one relation
   Post     Post[] // one to many relation
 
